@@ -25,6 +25,10 @@ target_compile_definitions(
     NTDDI_VERSION=0x06010000
 )
 target_compile_options(sqlite3_cli PRIVATE /O1)
-target_link_options(sqlite3_cli PRIVATE /SUBSYSTEM:CONSOLE,6.01)
+if(CMAKE_GENERATOR_PLATFORM STREQUAL "ARM64")
+  target_link_options(sqlite3_cli PRIVATE /SUBSYSTEM:CONSOLE)
+else()
+  target_link_options(sqlite3_cli PRIVATE /SUBSYSTEM:CONSOLE,6.01)
+endif()
 set_property(TARGET sqlite3_cli PROPERTY OUTPUT_NAME sqlite3)
 set_property(TARGET sqlite3_cli PROPERTY MSVC_RUNTIME_LIBRARY MultiThreaded)

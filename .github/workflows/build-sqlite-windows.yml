@@ -137,7 +137,7 @@ jobs:
           if ($LASTEXITCODE -ne 0 -or $headers -notmatch [regex]::Escape($env:EXPECTED_MACHINE)) {
             throw "Binary machine type does not match $env:SQLITE_ARCH"
           }
-          if ($headers -notmatch '(?im)^\s*6\.01 subsystem version\s*$') {
+          if ($env:SQLITE_ARCH -ne 'arm64' -and $headers -notmatch '(?im)^\s*6\.01 subsystem version\s*$') {
             throw "Binary subsystem version is not Windows 7 compatible (6.01)"
           }
 
