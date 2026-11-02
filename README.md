@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | Linux | x86、x86_64、arm（ARMv7）、arm64、mips64el、loong64 | 使用 musl 静态链接 |
 | macOS | universal2（x86_64、arm64） | SQLite 编入可执行文件；依赖 macOS 系统库 |
-| Windows | x86、x86_64、arm64 | MSVC 运行库静态链接（`/MT`）；依赖 Windows 系统 DLL |
+| Windows | x86、x86_64、arm64 | x86/x86_64 支持 Windows 7 SP1 及更新版本；arm64 不支持 Windows 7。MSVC 运行库静态链接（`/MT`），依赖 Windows 系统 DLL |
 
 ## 与 SQLite 官方预编译包的区别
 
