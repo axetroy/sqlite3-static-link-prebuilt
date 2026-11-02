@@ -8,7 +8,7 @@ Standalone SQLite command-line binaries for Linux, macOS, and Windows.
 | --- | --- | --- |
 | Linux | x86, x86_64, ARM (ARMv7), arm64, mips64el, loong64 | Statically linked with musl |
 | macOS | universal2 (x86_64, arm64) | SQLite is bundled; depends on macOS system libraries |
-| Windows | x86, x86_64, arm64 | MSVC runtime is statically linked (`/MT`); depends on Windows system DLLs |
+| Windows | x86, x86_64, arm64 | x86/x86_64 support Windows 7 SP1 and later; arm64 does not support Windows 7. MSVC runtime is statically linked (`/MT`); depends on Windows system DLLs |
 
 ## How this differs from SQLite's official prebuilt binaries
 
